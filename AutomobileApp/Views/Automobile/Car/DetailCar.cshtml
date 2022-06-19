@@ -1,11 +1,13 @@
-﻿@model AutomobileApp.Models.AutoMobileCompany
+﻿@model AutomobileApp.Models.Cars
 
 @{
-    ViewData["Title"] = "AutomobileDetail";
+    ViewData["Title"] = "DetailCar";
 }
 
+<h1>DetailCar</h1>
+
 <div>
-    <h4>Automobile Company</h4>
+    <h4>Cars</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -13,6 +15,12 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Model)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Foundation)
@@ -26,10 +34,15 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.CreatedDateTime)
         </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Company.Name)
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="AddEditAutomobile" asp-route-id="@Model.CompanyId">Edit</a> |
-
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="AddEditCar" class="btn btn-outline-primary btn-primary" asp-route-id="@Model.CarId">Edit</a> |
+    <a asp-action="CarList">Back to List</a>
 </div>

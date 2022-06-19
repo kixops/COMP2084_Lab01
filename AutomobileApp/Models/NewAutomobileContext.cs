@@ -22,15 +22,6 @@ namespace AutomobileApp.Models
         public virtual DbSet<AutoMobileCompany> AutoMobileCompany { get; set; }
         public virtual DbSet<Cars> Cars { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlServer("Server=DESKTOP-BFLTBC5;Database=NewAutomobile;Integrated Security=True");
-//            }
-//        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AutoMobileCompany>(entity =>
